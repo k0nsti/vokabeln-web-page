@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <title>Vokabel Page</title>
-    <link rel="stylesheet" href="./main.css" />
   </head>
 
   <body>
@@ -13,20 +12,20 @@
       Bestätigen!
     </button>
     <p id="answer"></p>
-    <script>
-      const words = { de: "gut", en: "good" };
-      document.getElementById("wordD").innerHTML = words["de"];
-      let w1 = words["en"];
-      let answer;
-      function check(w2) {
-        console.log("xxx", w1, w2);
-        if (w1 == w2) {
-          return (document.getElementById("answer").innerHTML = "richtig");
-        } else {
-          return (document.getElementById("answer").innerHTML = "falsch");
-        }
-        console.log(answer);
-      }
-    </script>
   </body>
+
+  <script>
+    const words = { 1: { de: "gut", en: "good" }, 2: {de: "süß", en: "cute"} };
+    document.getElementById("wordD").innerHTML = words[2]["de"];
+    let w1 = words[2]["en"];
+    let answer;
+    function check(w2) {
+      console.log("xxx", w1, w2);
+      if (w1 == w2) {
+        return (document.getElementById("answer").innerHTML = "richtig");
+      } else {
+        return (document.getElementById("answer").innerHTML = "falsch");
+      }
+    }
+  </script>
 </html>
