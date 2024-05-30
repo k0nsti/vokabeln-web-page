@@ -1,14 +1,9 @@
 <script>
-	import sqlite3 from "sqlite3";
-	
-	const db = new sqlite3.Database("../../../db/words.sqlite");
-	var stmt = db.prepare("select deutsch from load_csv ORDER BY RANDOM() LIMIT 1;");
+	export let data;
 	let enteredword = '';
 	let color = '';
-	const words = { 1: { de: 'gut', en: 'good' }, 2: { de: 'süß', en: 'cute' } };
-	let wordD = stmt.run();
-	console.log(wordD)
-	let w1 = words[2]['en'];
+	let wordD = data.deutsch;
+	let w1 = data.englisch;
 	let answer = '';
 	function check(w2) {
 		console.log('xxx', w1, w2);
@@ -26,8 +21,8 @@
 	<p>{wordD}</p>
 </div>
 
-<p> tippe das Wort in Englisch ein und bestätige</p>
-<input bind:value={enteredword}/>
+<p>tippe das Wort in Englisch ein und bestätige</p>
+<input bind:value={enteredword} />
 
 <button on:click={check(enteredword)}> Bestätigen! </button>
 

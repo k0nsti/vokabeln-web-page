@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"better-sqlite3": "^10.0.0",
 		"sqlite3": "^5.1.7"
 	}
 }
