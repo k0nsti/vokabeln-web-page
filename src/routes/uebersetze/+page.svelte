@@ -6,7 +6,6 @@
 	let w1 = data.englisch;
 	let answer = '';
 	function check(w2) {
-		console.log('xxx', w1, w2);
 		if (w1 == w2) {
 			answer = 'richtig';
 			color = 'green';
