@@ -5,7 +5,7 @@
 <nav>
 	<ul>
 		<li><a href="/" class:active={activePage === 'home'}>Home</a></li>
-		<li><a href="/uebersetze" class:active={activePage === 'uebersetze'}>Übersetzen</a></li>
+		<!--<li><a href="/uebersetze" class:active={activePage === 'uebersetze'}>Übersetzen</a></li-->
 	</ul>
 </nav>
 
