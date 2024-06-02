@@ -7,6 +7,10 @@
 	$: restlangs = languages.filter((l) => l !== selected);
 	const url = '/uebersetze';
   const description="losgeht`s"
+
+  function validate() {
+		return selected !== '' && playLangs.length > 0;
+	}
 </script>
 
 <h1>Lerne Vokabeln</h1>
@@ -33,4 +37,4 @@ Wähle Sprachen die du spielen willst:
 {/each}
 
 <br />
-<Button {url} {description}/>
+<Button {url} {description} {validate}/>
