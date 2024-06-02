@@ -8,7 +8,7 @@
 	let w1 = data.englisch;
 
     function check(w2) {
-		if (w1 == w2) {
+		if (w1.trim() == w2.trim()) {
 			answer = 'richtig';
 			color = 'green';
 		} else {
