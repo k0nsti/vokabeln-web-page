@@ -1,15 +1,25 @@
 <script>
-	import Button from '$lib/components/Button.svelte';
+	import { goto } from '$app/navigation';
+	//import { getWord } from '$lib/server/db/index.mjs';
+
 	export let data;
 	let selected = '';
 	let languages = Object.keys(data);
 	let playLangs = [];
 	$: restlangs = languages.filter((l) => l !== selected);
 	const url = '/uebersetze';
-  const description="losgeht`s"
+	const description = 'losgeht`s';
 
-  function validate() {
+	function validate() {
 		return selected !== '' && playLangs.length > 0;
+	}
+
+	function handleClick() {
+		if (validate()) {
+			goto(url);
+		} else {
+			alert('Please select a language and at least one play language.');
+		}
 	}
 </script>
 
@@ -37,4 +47,4 @@ Wähle Sprachen die du spielen willst:
 {/each}
 
 <br />
-<Button {url} {description} {validate}/>
+<button on:click={handleClick}> {description} </button>
