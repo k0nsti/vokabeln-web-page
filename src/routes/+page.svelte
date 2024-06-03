@@ -15,8 +15,9 @@
 	}
 
 	function handleClick() {
+    let uri=`${url}/source/${selected}/target/${restlangs}`
 		if (validate()) {
-			goto(url);
+			goto(uri);
 		} else {
 			alert('Please select a language and at least one play language.');
 		}
