@@ -18,7 +18,7 @@
 	}
 
 	async function loadNewWord() {
-		const response = await fetch('/api/get-data');
+		const response = await fetch('/api/get-new-word');
 		let xxxdata = await response.json();
 		// Update the word data with the new word received from the server
 		wordD = xxxdata.deutsch;
