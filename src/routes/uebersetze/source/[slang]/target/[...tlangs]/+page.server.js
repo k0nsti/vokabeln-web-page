@@ -1,5 +1,9 @@
 import { getWord } from '$lib/server/db/index.mjs';
 
 export function load({ params }) {
-    return getWord()
+    return {
+        wordLangs: getWord(),
+        sourceLang: params.slang,
+        targetLangs: params.tlangs
+    }
 }
